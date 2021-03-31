@@ -66,11 +66,11 @@ function Dots() {
     }
     ref.current.instanceMatrix.needsUpdate = true
   })
-//   material.color.setHex( 0xffffff );
+
   return (
     <instancedMesh ref={ref} args={[null, null, 10000]}>
       <circleBufferGeometry args={[0.05]} /> {/* Circle with radius of 0.15 */}
-      <meshBasicMaterial color="grey" /> Default to white color
+      <meshBasicMaterial wireframe color="white" /> Default to white color
     </instancedMesh>
   )
 }
