@@ -39,8 +39,8 @@ function App() {
           </Link>
         </div> */}
       {/* </div>
-      <div className="content"> */}
-        {/* <h2 className="content__title">Spirit of Rhythm</h2> */}
+    //   <div className="content"> */}
+        {/* <h2 className="content__title">Breath in/h2> */}
       {/* </div> */}
       <div id="animation">
         <Switch>

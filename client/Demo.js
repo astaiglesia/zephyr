@@ -5,6 +5,8 @@ import { ResizeObserver } from '@juggle/resize-observer'
 import * as THREE from 'three'
 
 // NON-INTERACTIVE VERSION
+// cube = new THREE.Mesh( geometry, material );
+// cube.material.color.setHex( 0xffffff );
 
 // Equation from https://dsp.stackexchange.com/a/56529
 // Visualized here https://www.desmos.com/calculator/uakymahh4u
@@ -51,10 +53,10 @@ function Dots() {
       const t = clock.elapsedTime - dist / 25
 
       // Oscillates between -0.4 and +0.4 with period of 3.8 seconds
-      const wave = roundedSquareWave(t, 0.15 + (0.2 * dist) / 72, 0.4, 1 / 8.5)
+      const wave = roundedSquareWave(t, 0.15 + (0.2 * dist) / 72, 0.4, 1/ 8.5)
 
       // Scale initial position by our oscillator
-      vec.copy(positions[i]).multiplyScalar(wave + 1.3)
+      vec.copy(positions[i]).multiplyScalar(wave + .6)
 
       // Apply the Vector3 position to the Matrix4
       transform.setPosition(vec)
@@ -64,10 +66,11 @@ function Dots() {
     }
     ref.current.instanceMatrix.needsUpdate = true
   })
+//   material.color.setHex( 0xffffff );
   return (
     <instancedMesh ref={ref} args={[null, null, 10000]}>
-      <circleBufferGeometry args={[0.15]} /> {/* Circle with radius of 0.15 */}
-      <meshBasicMaterial /> {/* Default to white color */}
+      <circleBufferGeometry args={[0.05]} /> {/* Circle with radius of 0.15 */}
+      <meshBasicMaterial color="grey" /> Default to white color
     </instancedMesh>
   )
 }
