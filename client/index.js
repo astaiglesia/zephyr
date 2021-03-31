@@ -17,17 +17,17 @@ import Demo from './Demo'
 function App() {
   return (
     <Router basename="/">
-      <div className="frame">
-        <h1 className="frame__title">
+      {/* <div className="frame"> */}
+        {/* <h1 className="frame__title">
           Recreating a <a href="https://twitter.com/beesandbombs/status/1329796242298245124">Dave Whyte</a> Animation <br />
           in React-Three-Fiber
-        </h1>
-        <div className="frame__links">
+        </h1> */}
+        {/* <div className="frame__links">
           <a href="https://tympanus.net/Development/HorizontalSmoothScrollLayout/">Previous demo</a>
           <a href="https://tympanus.net/codrops/?p=52356">Article</a>
           <a href="https://github.com/mattrossman/breathing-dots-tutorial">GitHub</a>
-        </div>
-        <div className="frame__author">
+        </div> */}
+        {/* <div className="frame__author">
           Made by <a href="https://twitter.com/the_ross_man">Matt Rossman</a>
         </div>
         <div className="frame__demos">
@@ -37,11 +37,11 @@ function App() {
           <Link to="/demo2" className="frame__demo">
             Interactive (press/hold & release)
           </Link>
-        </div>
-      </div>
-      <div className="content">
-        <h2 className="content__title">Spirit of Rhythm</h2>
-      </div>
+        </div> */}
+      {/* </div>
+      <div className="content"> */}
+        {/* <h2 className="content__title">Spirit of Rhythm</h2> */}
+      {/* </div> */}
       <div id="animation">
         <Switch>
           <Route exact path="/demo1">
